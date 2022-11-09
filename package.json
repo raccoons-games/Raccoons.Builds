@@ -1,0 +1,23 @@
+{
+  "name": "com.raccoons.builds",
+  "displayName": "Raccoons Builds",
+  "version": "0.1.0",
+  "description": "Raccoons build helpers and tools",
+  "unity": "2018.1",
+  "author": "Raccoons Games",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raccoons-games/Raccoons.Builds.git"
+  },
+  "keywords": [
+    "unity",
+	"build",
+	"tools",
+	"version"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/raccoons-games/Raccoons.Builds/issues"
+  },
+  "homepage": "https://github.com/raccoons-games/Raccoons.Builds#readme"
+}
