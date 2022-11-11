@@ -60,6 +60,18 @@ namespace Raccoons.Builds.Hubs
             Debug.Log($"[BuildVersioning] Copied to clipboard - {futureBuildName}");
         }
 
+        [MenuItem(MENU_PATH + "/Copy Future Version")]
+        public static void CopyFutureBuildVersion()
+        {
+            int latestIntSubVersion;
+            DirectoryInfo directoryInfo;
+            GetLastBuildData(out latestIntSubVersion, out directoryInfo);
+            latestIntSubVersion++;
+            string futureBuildName = GetVersionName(latestIntSubVersion, directoryInfo.Name);
+            GUIUtility.systemCopyBuffer = futureBuildName;
+            Debug.Log($"[BuildVersioning] Copied to clipboard - {futureBuildName}");
+        }
+
         private static string GetBuildName(int latestIntSubVersion, string releaseVersion)
         {
             string versionName = GetVersionName(latestIntSubVersion, releaseVersion);
@@ -93,6 +105,7 @@ namespace Raccoons.Builds.Hubs
                 }
             }
         }
+
 
         private static void ThrowIfInvalidHub()
         {
